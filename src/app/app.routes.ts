@@ -8,10 +8,10 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.routes'),
+    loadChildren: () => import('./feature/home/home.routes'),
   },
   {
     path: 'user',
-    loadChildren: () => import('./user/user.routes'),
+    loadChildren: () => import('./feature/user/user.routes'),
   },
 ];
