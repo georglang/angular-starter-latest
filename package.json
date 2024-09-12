@@ -8,7 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format:test": "prettier --list-different \"./projects/**/*.{ts,html,scss,json}\"",
-    "format:write": "prettier --write \"./projects/**/*.{ts,html,scss,json}\""
+    "format:write": "prettier --write \"./projects/**/*.{ts,html,scss,json}\"",
+    "analyze:deps": "npm-run-all analyze:deps:*",
+    "analyze:deps:all": "madge projects/starter-latest/src/main.ts --ts-config tsconfig.json --image ./deps/starter-latest/_all.png",
+    "analyze:deps:feature": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/starter-latest/feature.png projects/starter-latest/src/app/feature/",
+    "analyze:deps:core": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/starter-latest/core.png projects/starter-latest/src/app/core/"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +41,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "madge": "^8.0.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
     "typescript": "~5.5.4"
   }
