@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
 
-export default <Routes>[
+export default [
   {
     path: '',
     providers: [],
     children: [
       {
         path: '',
-        loadComponent: () => import('./home.component').then((m) => m.HomeComponent),
+        loadComponent: () =>
+          import('./home.component').then((m) => m.HomeComponent),
       },
     ],
   },
-];
+] as Routes;
