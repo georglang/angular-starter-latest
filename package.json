@@ -12,7 +12,8 @@
     "analyze:deps": "npm-run-all analyze:deps:*",
     "analyze:deps:all": "madge projects/starter-latest/src/main.ts --ts-config tsconfig.json --image ./deps/starter-latest/_all.png",
     "analyze:deps:feature": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/starter-latest/feature.png projects/starter-latest/src/app/feature/",
-    "analyze:deps:core": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/starter-latest/core.png projects/starter-latest/src/app/core/"
+    "analyze:deps:core": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/starter-latest/core.png projects/starter-latest/src/app/core/",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,8 @@
     "@angular/cli": "^18.2.4",
     "@angular/compiler-cli": "^18.2.4",
     "@types/jasmine": "~5.1.0",
+    "angular-eslint": "18.3.1",
+    "eslint": "^9.9.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -42,8 +45,10 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "madge": "^8.0.0",
+    "ng-packagr": "^18.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
-    "typescript": "~5.5.4"
+    "typescript": "~5.5.4",
+    "typescript-eslint": "8.2.0"
   }
 }
